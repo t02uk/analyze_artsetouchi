@@ -11,7 +11,7 @@ case class DateTime(
     sec: Int) {
   
   val c = Calendar.getInstance()
-  c.set(year, month, day, hour, min, sec)
+  c.set(year, month - 1, day, hour, min, sec)
   
   def weekOf = c.get(Calendar.DAY_OF_WEEK) match {
     case Calendar.SUNDAY => "Sun"
